@@ -4,8 +4,16 @@ services:
     env: docker
     plan: starter
     autoDeploy: true
+
+    rootDir: backend
+    dockerfilePath: ../Dockerfile
+
     healthCheckPath: /healthz
+
     envVars:
+      - key: PORT
+        value: 8000
+
       - key: EXTERNAL_LLM_BASE_URL
         sync: false
       - key: EXTERNAL_LLM_API_KEY
@@ -16,6 +24,7 @@ services:
         sync: false
       - key: ATLAS_DB_PATH
         value: /var/data/app.db
+
 disks:
   - name: atlas-data
     mountPath: /var/data
