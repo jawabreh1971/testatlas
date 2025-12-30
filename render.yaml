@@ -13,7 +13,6 @@ services:
     envVars:
       - key: PORT
         value: 10000
-
       - key: EXTERNAL_LLM_BASE_URL
         sync: false
       - key: EXTERNAL_LLM_API_KEY
@@ -25,7 +24,7 @@ services:
       - key: ATLAS_DB_PATH
         value: /var/data/app.db
 
-disks:
-  - name: atlas-data
-    mountPath: /var/data
-    sizeGB: 1
+    disks:
+      - name: atlas-data
+        mountPath: /var/data
+        sizeGB: 1
