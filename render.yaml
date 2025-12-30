@@ -4,12 +4,9 @@ services:
     env: docker
     plan: starter
     autoDeploy: true
-
     rootDir: backend
     dockerfilePath: ../Dockerfile
-
     healthCheckPath: /healthz
-
     envVars:
       - key: PORT
         value: 10000
@@ -23,8 +20,3 @@ services:
         sync: false
       - key: ATLAS_DB_PATH
         value: /var/data/app.db
-
-    disks:
-      - name: atlas-data
-        mountPath: /var/data
-        sizeGB: 1
