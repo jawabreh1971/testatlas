@@ -4,8 +4,8 @@ services:
     env: docker
     plan: starter
     autoDeploy: true
-    rootDir: backend
-    dockerfilePath: ../Dockerfile
+    rootDir: .
+    dockerfilePath: Dockerfile
     healthCheckPath: /healthz
     envVars:
       - key: PORT
