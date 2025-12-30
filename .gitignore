@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+# Node
+node_modules/
+dist/
+# Local DB
+backend/data/*.db
+# Env
+.env
+*.env
