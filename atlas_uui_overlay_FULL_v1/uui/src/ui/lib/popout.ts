@@ -1,0 +1,1 @@
+export function openPopout(title:string, html:string){ const w=window.open('', '_blank', 'noopener,noreferrer,width=520,height=640'); if(!w) return; w.document.title=title; w.document.body.style.margin='0'; w.document.body.innerHTML=html; }
